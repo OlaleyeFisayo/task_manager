@@ -42,7 +42,7 @@ const deleteTask = async (req, res) => {
     if (!task) {
       return res.status(404).json({ msg: `No task with the id : ${taskID}` });
     }
-    res.status(204);
+    res.status(200).json({ task });
   } catch (error) {
     res.status(500).json({ msg: error });
   }
