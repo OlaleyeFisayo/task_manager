@@ -5,13 +5,10 @@ const connectDB = require("./db/connect");
 require("dotenv").config();
 
 //middleware
+app.use(express.static("./public"))
 app.use(express.json());
 
 //routes
-app.get("/", (req, res) => {
-  res.send("Server is working");
-});
-
 //app.get("/api/v1/tasks") - get all the tasks
 //app.post("/api/v1/tasks") - create a new tasks
 //app.get("/api/v1/tasks/:id") - get single
