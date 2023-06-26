@@ -9,11 +9,6 @@ app.use(express.static("./public"))
 app.use(express.json());
 
 //routes
-//app.get("/api/v1/tasks") - get all the tasks
-//app.post("/api/v1/tasks") - create a new tasks
-//app.get("/api/v1/tasks/:id") - get single
-//app.patch("/api/v1/tasks/:id") - update tasks
-//app.delete("/api/v1/tasks") - delete tasks
 app.use("/api/v1/tasks", tasks);
 
 const port = process.env.PORT;
